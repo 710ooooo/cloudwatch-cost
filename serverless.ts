@@ -1,6 +1,7 @@
 import type { AWS } from '@serverless/typescript';
 
-import hello from '@functions/hello';
+import hello1 from '@functions/hello1';
+import hello2 from '@functions/hello2';
 
 const serverlessConfiguration: AWS = {
   service: 'cloudwatch-cost',
@@ -20,7 +21,7 @@ const serverlessConfiguration: AWS = {
     },
   },
   // import the function via paths
-  functions: { hello },
+  functions: { hello1, hello2 },
   package: { individually: true },
   custom: {
     esbuild: {
